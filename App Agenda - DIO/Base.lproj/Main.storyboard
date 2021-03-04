@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k2q-g4-bLv">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,19 +12,22 @@
             <objects>
                 <tableViewController id="025-uN-Jhh" customClass="TasksTableViewController" customModule="App_Agenda___DIO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wgk-TO-HbL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="ScV-gn-ib2">
-                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="80" id="ScV-gn-ib2" customClass="TaskTableViewCell" customModule="App_Agenda___DIO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ScV-gn-ib2" id="aUv-2l-hC3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03/03/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9C-M4-Zzm">
-                                            <rect key="frame" x="21" y="45.333333333333336" width="61" height="14"/>
+                                            <rect key="frame" x="17.5" y="45.5" width="61" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="C9C-M4-Zzm" secondAttribute="height" multiplier="61:14" id="dsi-f8-geu"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -37,21 +40,22 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marketing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhL-7c-qxa">
-                                            <rect key="frame" x="100" y="19" width="53" height="13.666666666666664"/>
+                                            <rect key="frame" x="100" y="19" width="53" height="13.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mD-2H-mm1">
-                                            <rect key="frame" x="100" y="39.333333333333336" width="46" height="23.333333333333336"/>
+                                            <rect key="frame" x="100" y="39" width="46" height="23.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAl-FT-52N">
-                                            <rect key="frame" x="20" y="14.999999999999998" width="63" height="30.333333333333329"/>
+                                            <rect key="frame" x="16" y="15" width="63.5" height="30.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30.333333333333329" id="Pes-v2-a4e"/>
+                                                <constraint firstAttribute="width" secondItem="vAl-FT-52N" secondAttribute="height" multiplier="21:10" id="SfR-YS-NoS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
                                             <nil key="textColor"/>
@@ -74,6 +78,14 @@
                                         <constraint firstItem="vAl-FT-52N" firstAttribute="centerX" secondItem="C9C-M4-Zzm" secondAttribute="centerX" id="pqQ-dk-AZd"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="LhL-7c-qxa" id="CuR-Cw-KxN"/>
+                                    <outlet property="categoryNameLabel" destination="LhL-7c-qxa" id="F2Z-P9-X1Z"/>
+                                    <outlet property="categoryView" destination="ya2-Id-Z7m" id="tFA-tn-O1c"/>
+                                    <outlet property="dateLabel" destination="C9C-M4-Zzm" id="LS6-aY-Yhr"/>
+                                    <outlet property="hourLabel" destination="vAl-FT-52N" id="Edl-B2-PWG"/>
+                                    <outlet property="taskDescriptionLabel" destination="8mD-2H-mm1" id="Jog-4W-NjK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,7 +104,7 @@
             <objects>
                 <navigationController id="k2q-g4-bLv" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7By-5T-JS7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
