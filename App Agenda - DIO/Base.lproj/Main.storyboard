@@ -67,15 +67,15 @@
                                         <constraint firstItem="vAl-FT-52N" firstAttribute="leading" secondItem="aUv-2l-hC3" secondAttribute="leadingMargin" id="82S-qg-Fcz"/>
                                         <constraint firstItem="vAl-FT-52N" firstAttribute="top" secondItem="aUv-2l-hC3" secondAttribute="topMargin" constant="4" id="BLo-l0-Kjw"/>
                                         <constraint firstItem="8mD-2H-mm1" firstAttribute="leading" secondItem="aUv-2l-hC3" secondAttribute="leading" constant="100" id="EAg-jc-atP"/>
+                                        <constraint firstItem="LhL-7c-qxa" firstAttribute="top" secondItem="aUv-2l-hC3" secondAttribute="topMargin" constant="8" id="JdJ-8o-5Cs"/>
                                         <constraint firstItem="ya2-Id-Z7m" firstAttribute="leading" secondItem="aUv-2l-hC3" secondAttribute="leading" constant="90" id="MP0-Wt-BZ9"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8mD-2H-mm1" secondAttribute="trailing" constant="10" id="N87-Ed-fVe"/>
-                                        <constraint firstItem="8mD-2H-mm1" firstAttribute="top" secondItem="LhL-7c-qxa" secondAttribute="bottom" constant="6.6666666666666643" id="Vek-1f-Chh"/>
+                                        <constraint firstItem="8mD-2H-mm1" firstAttribute="top" secondItem="LhL-7c-qxa" secondAttribute="bottom" constant="6.5" id="T7q-I4-dqS"/>
                                         <constraint firstItem="C9C-M4-Zzm" firstAttribute="top" secondItem="vAl-FT-52N" secondAttribute="bottom" constant="7.1054273576010019e-15" id="Xn5-jO-lcJ"/>
-                                        <constraint firstItem="LhL-7c-qxa" firstAttribute="leading" secondItem="8mD-2H-mm1" secondAttribute="leading" id="a3F-v0-ALA"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8mD-2H-mm1" secondAttribute="bottom" constant="10" id="hcK-a6-kpc"/>
-                                        <constraint firstItem="LhL-7c-qxa" firstAttribute="top" secondItem="aUv-2l-hC3" secondAttribute="topMargin" constant="8" id="hdF-i7-jtq"/>
                                         <constraint firstItem="ya2-Id-Z7m" firstAttribute="top" secondItem="aUv-2l-hC3" secondAttribute="top" constant="11" id="ndp-1D-Ib4"/>
                                         <constraint firstItem="vAl-FT-52N" firstAttribute="centerX" secondItem="C9C-M4-Zzm" secondAttribute="centerX" id="pqQ-dk-AZd"/>
+                                        <constraint firstItem="LhL-7c-qxa" firstAttribute="leading" secondItem="8mD-2H-mm1" secondAttribute="leading" id="qNc-pY-sUt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -93,11 +93,103 @@
                             <outlet property="delegate" destination="025-uN-Jhh" id="JWs-rH-gip"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Tasks" id="aX3-Gv-8kg"/>
+                    <navigationItem key="navigationItem" title="My Tasks" id="aX3-Gv-8kg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="1KD-DQ-yp2">
+                            <connections>
+                                <segue destination="lhf-6w-nfR" kind="show" id="AeQ-KV-dWg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgV-TV-Bls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795.6521739130437" y="79.6875"/>
+            <point key="canvasLocation" x="1678" y="80"/>
+        </scene>
+        <!--Creat Task-->
+        <scene sceneID="IJY-nI-oXn">
+            <objects>
+                <tableViewController id="lhf-6w-nfR" customClass="CreatTaskTableViewController" customModule="App_Agenda___DIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3K4-SU-1SJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskDescriptionCell" rowHeight="50" id="50m-nw-6MF" customClass="TaskDescriptionTableViewCell" customModule="App_Agenda___DIO" customModuleProvider="target">
+                                <rect key="frame" x="16" y="55.5" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="50m-nw-6MF" id="SB6-nU-r5j">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add your task:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ad-af-149">
+                                            <rect key="frame" x="16" y="8" width="311" height="34"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="3ad-af-149" secondAttribute="bottom" constant="8" id="JL2-kT-H3B"/>
+                                        <constraint firstAttribute="trailing" secondItem="3ad-af-149" secondAttribute="trailing" constant="16" id="WPP-ck-pLy"/>
+                                        <constraint firstItem="3ad-af-149" firstAttribute="top" secondItem="SB6-nU-r5j" secondAttribute="top" constant="8" id="XGw-ws-dGv"/>
+                                        <constraint firstItem="3ad-af-149" firstAttribute="leading" secondItem="SB6-nU-r5j" secondAttribute="leading" constant="16" id="cyY-gY-Ldk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskDescriptionTextField" destination="3ad-af-149" id="GBY-LK-PZS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCell" textLabel="Mom-iB-1XM" rowHeight="50" style="IBUITableViewCellStyleDefault" id="5M7-Hk-Frl">
+                                <rect key="frame" x="16" y="105.5" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5M7-Hk-Frl" id="Pfb-J4-adV">
+                                    <rect key="frame" x="0.0" y="0.0" width="316" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Marketing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mom-iB-1XM">
+                                            <rect key="frame" x="16" y="0.0" width="292" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DateCell" rowHeight="50" id="OX2-39-lR8" customClass="DateTimeTableViewCell" customModule="App_Agenda___DIO" customModuleProvider="target">
+                                <rect key="frame" x="16" y="155.5" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OX2-39-lR8" id="8h2-64-AHU">
+                                    <rect key="frame" x="0.0" y="0.0" width="316" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzE-di-Byu">
+                                            <rect key="frame" x="16" y="8" width="230" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="gzE-di-Byu" secondAttribute="trailing" constant="70" id="cT3-fx-Fy1"/>
+                                        <constraint firstAttribute="bottom" secondItem="gzE-di-Byu" secondAttribute="bottom" constant="8" id="fIG-sc-Nzl"/>
+                                        <constraint firstItem="gzE-di-Byu" firstAttribute="leading" secondItem="8h2-64-AHU" secondAttribute="leading" constant="16" id="nkv-Yw-1hE"/>
+                                        <constraint firstItem="gzE-di-Byu" firstAttribute="top" secondItem="8h2-64-AHU" secondAttribute="top" constant="8" id="zbw-Ks-WGD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateTimeTextField" destination="gzE-di-Byu" id="Ous-aL-3Lf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lhf-6w-nfR" id="8go-ko-Tpg"/>
+                            <outlet property="delegate" destination="lhf-6w-nfR" id="dAg-lZ-yLE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Creat Task" id="Ay1-dZ-LgG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Dq-dF-H6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464.8000000000002" y="79.610194902548727"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ddl-Lt-Tud">
@@ -117,6 +209,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
