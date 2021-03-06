@@ -185,7 +185,13 @@
                             <outlet property="delegate" destination="lhf-6w-nfR" id="dAg-lZ-yLE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Creat Task" id="Ay1-dZ-LgG"/>
+                    <navigationItem key="navigationItem" title="Creat Task" id="Ay1-dZ-LgG">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Sc4-jd-UgJ">
+                            <connections>
+                                <action selector="SaveButton:" destination="lhf-6w-nfR" id="ie6-1g-NsP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Dq-dF-H6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
