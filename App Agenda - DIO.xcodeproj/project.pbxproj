@@ -10,6 +10,8 @@
 		0B07275625F2974700CA5AB1 /* CreatTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B07275525F2974700CA5AB1 /* CreatTaskTableViewController.swift */; };
 		0B07277F25F2BB4100CA5AB1 /* TaskDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B07277E25F2BB4100CA5AB1 /* TaskDescriptionTableViewCell.swift */; };
 		0B07278725F2BB7F00CA5AB1 /* DateTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B07278625F2BB7F00CA5AB1 /* DateTimeTableViewCell.swift */; };
+		0B55DFB725F823E9005BCDAA /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B55DFB625F823E9005BCDAA /* CategoryTableViewController.swift */; };
+		0B55DFC025F824E6005BCDAA /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B55DFBF25F824E6005BCDAA /* CategoryRepository.swift */; };
 		0B79CBAD25F1309600498CF7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79CBAC25F1309600498CF7 /* Task.swift */; };
 		0B79CBB525F1328E00498CF7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79CBB425F1328E00498CF7 /* Category.swift */; };
 		0B79CBBE25F1399200498CF7 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79CBBD25F1399200498CF7 /* TaskTableViewCell.swift */; };
@@ -21,6 +23,7 @@
 		0B9812DB25EFD55900761089 /* App_Agenda___DIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9812DA25EFD55900761089 /* App_Agenda___DIOTests.swift */; };
 		0B9812E625EFD55900761089 /* App_Agenda___DIOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9812E525EFD55900761089 /* App_Agenda___DIOUITests.swift */; };
 		0B98130B25F0216200761089 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98130A25F0216200761089 /* TasksTableViewController.swift */; };
+		0BAD88E925F91C4500C1A7D2 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD88E825F91C4500C1A7D2 /* TaskRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		0B07275525F2974700CA5AB1 /* CreatTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatTaskTableViewController.swift; sourceTree = "<group>"; };
 		0B07277E25F2BB4100CA5AB1 /* TaskDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		0B07278625F2BB7F00CA5AB1 /* DateTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeTableViewCell.swift; sourceTree = "<group>"; };
+		0B55DFB625F823E9005BCDAA /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		0B55DFBF25F824E6005BCDAA /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		0B79CBAC25F1309600498CF7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		0B79CBB425F1328E00498CF7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0B79CBBD25F1399200498CF7 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		0B9812E525EFD55900761089 /* App_Agenda___DIOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App_Agenda___DIOUITests.swift"; sourceTree = "<group>"; };
 		0B9812E725EFD55900761089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B98130A25F0216200761089 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
+		0BAD88E825F91C4500C1A7D2 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B55DFBE25F8248B005BCDAA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0BAD88E825F91C4500C1A7D2 /* TaskRepository.swift */,
+				0B55DFBF25F824E6005BCDAA /* CategoryRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		0B79CBAB25F1300200498CF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +145,7 @@
 		0B9812C225EFD55700761089 /* App Agenda - DIO */ = {
 			isa = PBXGroup;
 			children = (
+				0B55DFBE25F8248B005BCDAA /* Repository */,
 				0B79CBAB25F1300200498CF7 /* Models */,
 				0B9812F925F0208200761089 /* Controllers */,
 				0B9812C325EFD55700761089 /* AppDelegate.swift */,
@@ -166,6 +182,7 @@
 				0B79CBBC25F1396000498CF7 /* Cells */,
 				0B07275525F2974700CA5AB1 /* CreatTaskTableViewController.swift */,
 				0B98130A25F0216200761089 /* TasksTableViewController.swift */,
+				0B55DFB625F823E9005BCDAA /* CategoryTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,11 +319,14 @@
 			files = (
 				0B79CBAD25F1309600498CF7 /* Task.swift in Sources */,
 				0B07275625F2974700CA5AB1 /* CreatTaskTableViewController.swift in Sources */,
+				0B55DFC025F824E6005BCDAA /* CategoryRepository.swift in Sources */,
 				0B79CBB525F1328E00498CF7 /* Category.swift in Sources */,
 				0B07277F25F2BB4100CA5AB1 /* TaskDescriptionTableViewCell.swift in Sources */,
 				0B07278725F2BB7F00CA5AB1 /* DateTimeTableViewCell.swift in Sources */,
+				0BAD88E925F91C4500C1A7D2 /* TaskRepository.swift in Sources */,
 				0B79CBBE25F1399200498CF7 /* TaskTableViewCell.swift in Sources */,
 				0B98130B25F0216200761089 /* TasksTableViewController.swift in Sources */,
+				0B55DFB725F823E9005BCDAA /* CategoryTableViewController.swift in Sources */,
 				0B9812C425EFD55700761089 /* AppDelegate.swift in Sources */,
 				0B9812C625EFD55700761089 /* SceneDelegate.swift in Sources */,
 			);

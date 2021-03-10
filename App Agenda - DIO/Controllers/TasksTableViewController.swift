@@ -7,24 +7,25 @@
 
 import UIKit
 
-let work = Category(name: "Work", color: UIColor.green)
-let study = Category(name: "Study", color: UIColor.blue)
-let tasks: [Task] = [
-    Task(name: "Creat presentation for tomorrow", date: Date(), category: work),
-    Task(name: "Study Math", date: Date(), category:study),
-]
-
 class TasksTableViewController: UITableViewController {
+    
+    private var dateFormatter: DateFormatter = DateFormatter()
+    
+    private var tasks: [Task] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.tasks = TaskRepository.instance.getTasks()
+        self.tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return tasks.count
     }
-    
-    private var dateFormatter: DateFormatter = DateFormatter()
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
